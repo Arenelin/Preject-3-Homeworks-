@@ -5,42 +5,100 @@
 
 //===== ОБНУЛЕНИЕ ========//
 
+@mixin top ($fz, $cl, $lh){
+   font-size: $fz;
+   color: $cl;
+   line-height: $lh;
+}
+@mixin bott ($cl, $lh){
+   color: $cl;
+   line-height: $lh;
+}
+
 body{
    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
    max-width: 1280px;
    margin: 0 auto;
 }
 
+// =================БЛОК HEAD==================//
+
 .head{
    padding: 54px 0px 0px 51px;
    margin: 0px 0px 28px 0px;
    .head__title{
-   color: #445161;
-   font-size: 30px;
-   font-weight: 400;
-   line-height: 30px;
    margin: 0px 0px 21px 0px;
+   @include top (30px,#445161,30px);
    }
    .head__text{
    color: #333333;
    line-height: 25px;
    padding: 0px 116px 0px 0px;
    margin: 0px 0px 24px 0px;
+   @include bott (#333333,25px);
    }
    .head__subtitle{
-   color: #445161;
-   font-size: 25px;
-   line-height: 30px;
    margin: 0px 0px 20px 0px;
+   @include top (25px,#445161,30px);
    }
    .head__text2{
-   color: #333333;
    font-weight: bold;
-   line-height: 14px;
    margin: 0px 0px 20px 0px;
+   @include bott (#333333,14px);
    }
    .head__text3{
-   color: #ff0000;
-   line-height: 14px;
+   @include bott (#ff0000,14px);
    }
 }
+
+// =================БЛОК HEAD==================//
+
+
+//================ БЛОК BOTTOM=================//
+
+.bottom{
+   padding: 0px 51px 0px 51px;
+   .bottom__title{
+   margin: 0px 0px 19px 0px;
+   @include top (20px,#445161,30px);
+   }
+   & p{
+      margin: 0px 0px 22px 0px;
+   }
+   .bottom__text{
+   text-align: right;
+   @include bott (#333333,14px);
+   }
+   .bottom__text2{
+   @include bott (#333333,14px);
+   text-transform: uppercase;
+   }
+   .bottom__text3 {
+   @include bott (#333333,14px);
+   }
+   .bottom__text4 {
+   @include bott (#333333,14px);
+   text-decoration: underline;
+   }
+   .bottom__text5 {
+   @include bott (#333333,14px);
+   text-align: center;
+   }
+   .bottom__text6 {
+   @include top (24px,#333333,24px);
+   }
+   .bottom__text7 {
+   @include bott (#333333,14px);
+   text-decoration: line-through;
+   }
+   .bottom__text8 {
+   font-family: 'Times New Roman', Times, serif;
+   @include bott (#333333,14px);
+   }
+   .bottom__text9 {
+   text-shadow: 1px 1px 1px #000000;
+   @include bott (#333333,14px);
+   }
+}
+
+//================ БЛОК BOTTOM=================//
